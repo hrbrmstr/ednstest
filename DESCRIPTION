@@ -1,6 +1,6 @@
 Package: ednstest
 Type: Package
-Title: ednstest title goes here otherwise CRAN checks fail
+Title: 'RFC' 6891 ('EDNS') Compliance Checker
 Version: 0.1.0
 Date: 2019-01-10
 Authors@R: c(
@@ -8,7 +8,8 @@ Authors@R: c(
            comment = c(ORCID = "0000-0001-5670-2640"))
   )
 Maintainer: Bob Rudis <bob@rud.is>
-Description: A good description goes here otherwise CRAN checks fail.
+Description: Checks 'Domain Name System' ('DNS') zones for compliance with 
+    'RFC' 6891 ('EDNS').
 URL: https://gitlab.com/hrbrmstr/ednstest
 BugReports: https://gitlab.com/hrbrmstr/ednstest/issues
 Encoding: UTF-8
@@ -20,6 +21,9 @@ Depends:
     R (>= 3.2.0)
 Imports:
     httr,
-    jsonlite
+    jsonlite,
+    cli,
+    crayon,
+    utils
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1

@@ -4,12 +4,19 @@
 \name{ednstest}
 \alias{ednstest}
 \alias{ednstest-package}
-\title{...}
+\title{'RFC' 6891 ('EDNS') Compliance Checker}
 \description{
+Checks 'Domain Name System' ('DNS') zones for compliance with
+'RFC' 6891 ('EDNS').
+}
+\details{
 \itemize{
 \item URL: \url{https://gitlab.com/hrbrmstr/ednstest}
 \item BugReports: \url{https://gitlab.com/hrbrmstr/ednstest/issues}
 }
+}
+\references{
+\url{https://ednscomp.isc.org/}; \url{https://tools.ietf.org/html/rfc6891}
 }
 \author{
 Bob Rudis (bob@rud.is)

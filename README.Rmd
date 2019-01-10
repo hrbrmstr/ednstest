@@ -4,7 +4,7 @@ editor_options:
   chunk_output_type: inline
 ---
 ```{r pkg-knitr-opts, include=FALSE}
-knitr$opts_chunk$set(collapse=TRUE, fig.retina=2, message=FALSE, warning=FALSE)
+knitr::opts_chunk$set(collapse=TRUE, fig.retina=2, message=FALSE, warning=FALSE)
 options(width=120)
 ```
 
@@ -14,11 +14,19 @@ options(width=120)
 
 # ednstest
 
+'RFC' 6891 ('EDNS') Compliance Checker
+
 ## Description
+
+Checks 'Domain Name System' ('DNS') zones for compliance with  'RFC' 6891 ('EDNS').
+
+You can read more about this at the [DNS Flag Day website](https://dnsflagday.net/), but the minimal working setup which will allow your domain to survive 2019 DNS flag day must not have `timeout` result in any of plain DNS and EDNS version 0 tests implemented in [ednscomp](https://ednscomp.isc.org/ednscomp) tool.
 
 ## What's Inside The Tin
 
 The following functions are implemented:
+
+- `ednstest`:	'RFC' 6891 ('EDNS') Compliance Checker
 
 ## Installation
 
@@ -38,6 +46,14 @@ library(ednstest)
 # current version
 packageVersion("ednstest")
 
+```
+
+```{r give-it-a-go, cache=TRUE}
+edns_test("rud.is")
+
+edns_test("rstudio.com")
+
+edns_test("r-project.org")
 ```
 
 ## ednstest Metrics
